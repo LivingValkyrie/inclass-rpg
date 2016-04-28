@@ -42,19 +42,20 @@ public class CameraFollow : MonoBehaviour {
 		float targetY = transform.position.y;
 
 		if (CheckXMargin()) {
-			print("wef");
+			//print("wef");
 			targetX = Mathf.Lerp(transform.position.x, player.position.x, xSmooth * Time.deltaTime);
 		}
 
 		if (CheckYMargin()) {
 			targetY = Mathf.Lerp(transform.position.y, player.position.y, ySmooth * Time.deltaTime);
 		}
-		print(targetX + " " + targetY + " before clamp");
+
+		//print(targetX + " " + targetY + " before clamp");
 
 		targetX = Mathf.Clamp(targetX, minXandY.x, maxXandY.x);
 		targetY = Mathf.Clamp(targetY, minXandY.y, maxXandY.y);
 
-		print(targetX + " " + targetY + " after clamp");
+		//print(targetX + " " + targetY + " after clamp");
 
 		transform.position = new Vector3(targetX, targetY, transform.position.z);
 	}

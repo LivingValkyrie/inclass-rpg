@@ -16,6 +16,7 @@ public class Entity : ScriptableObject {
 	public string entityName;
 	public int age;
 
+
 	protected string faction;
 
 	public string occupation;
